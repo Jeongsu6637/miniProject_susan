@@ -20,7 +20,7 @@
         <beans:property name="prefix" value="/WEB-INF/views/" />
         <beans:property name="suffix" value=".jsp" />
     </beans:bean>
-    <context:component-scan base-package="com.test">
+    <context:component-scan base-package="com.susan">
         <!--  <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>  -->
     </context:component-scan>
     <!-- Default bean name is 'mongo' -->

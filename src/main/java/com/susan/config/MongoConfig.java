@@ -1,4 +1,4 @@
-package com.test.config;
+package com.susan.config;
 import java.util.Collection;
 import java.util.Collections;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +20,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration{
         return MongoClients.create(mongoClientSettings);
     }
     public Collection getMappingBasePackages() {
-        return Collections.singleton("com.test");
+        return Collections.singleton("com.susan.config");
     }
 }

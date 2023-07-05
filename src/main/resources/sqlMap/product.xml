@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.susan.domain.dao.ProductMapper">
+    <select id="searchByKeyword" resultType="SearchByKeyword" parameterType="String" >
+        select s.store_name, image_link
+        from Product as p
+        inner Join Menu as m on p.pro_seq = m.pro_seq
+        inner join Store as s on m.store_seq = s.store_seq
+        where name = #{name};
+    </select>
+</mapper>
