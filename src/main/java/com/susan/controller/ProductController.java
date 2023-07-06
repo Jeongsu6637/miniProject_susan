@@ -4,6 +4,7 @@ package com.susan.controller;
 import com.susan.domain.entity.Product;
 import com.susan.domain.request.ProductInsertRequest;
 import com.susan.domain.request.ProductUpdateRequest;
+import com.susan.service.MongoService;
 import com.susan.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,13 +18,18 @@ public class ProductController {
 
     private final ProductService productService;
 
-    public ProductController(ProductService productService) {
+    //Test
+    private final MongoService mongoService;
+
+    public ProductController(ProductService productService, MongoService mongoService) {
         this.productService = productService;
+        this.mongoService = mongoService;
     }
 
     @GetMapping
     public ModelAndView AllProduct(ModelAndView mav){
 
+        mongoService.findData();
         List<Product> allProduct = productService.findAllProduct();
 
         mav.addObject("products",allProduct);
@@ -43,7 +49,7 @@ public class ProductController {
 
     /**
      * PostMapping: 물건 삽입을 처리하는 요청
-     * @param ProductInsertRequest
+     * @param
      * @return 아직 미정
      */
     @PostMapping("/insert")
