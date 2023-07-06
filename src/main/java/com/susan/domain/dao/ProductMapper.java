@@ -6,5 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface ProductMapper {
+    // 물품 등록 SQL
     Integer insertProduct(Product product);
+
+    //물품 수정 SQL
+    Integer updateProduct(Product product);
+
+    //물품 삭제 SQL
+    Integer deleteProduct(int seq);
 }

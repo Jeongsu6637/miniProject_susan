@@ -11,6 +11,12 @@ public class Product {
         this.category=category;
     }
 
+    public void createUpdateProduct(int product_seq,String product_name,String category){
+        this.product_seq = product_seq;
+        this.product_name=product_name;
+        this.category=category;
+    }
+
     public int getProduct_seq() {
         return product_seq;
     }
