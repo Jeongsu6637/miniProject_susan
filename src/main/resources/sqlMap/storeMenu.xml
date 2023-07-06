@@ -5,7 +5,7 @@
 <mapper namespace="com.susan.domain.dao.StoreMapper">
 
     <select id="findAllMenu"  resultType="com.susan.domain.entity.Menu" parameterType="int">
-        select store_name,name,category,price,count
+        select store_name,name,category,price,count, p.pro_seq
         from menu as m
                  join store as s on m.store_seq =s.store_seq
                  join product as p on  m.pro_seq =p.pro_seq

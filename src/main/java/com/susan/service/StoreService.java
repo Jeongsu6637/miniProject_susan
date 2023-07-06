@@ -1,8 +1,11 @@
 package com.susan.service;
 
 import com.susan.domain.dao.StoreMapper;
+import com.susan.domain.entity.Cart;
 import com.susan.domain.entity.Menu;
+import com.susan.domain.entity.MyCart;
 import com.susan.domain.entity.Store;
+import com.susan.domain.request.CartRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +25,11 @@ public class StoreService {
         return storeMapper.findAllMenu(store_seq);
     }
 
+    public int insertcart(CartRequest request){
+        return storeMapper.addCart(request);
+    }
 
-
+    public List<MyCart> AllCart(int userSeq){
+        return storeMapper.AllCart(userSeq);
+    }
 }

@@ -1,18 +1,20 @@
 package com.susan.domain.entity;
 
 public class Menu {
+    private int menu_seq;
     private String store_name;
     private String name;
     private String category;
     private int price;
     private int count;
 
-    public Menu(String store_name, String name, String category, int price, int count) {
+    public Menu(String store_name, String name, String category, int price, int count, int menu_seq) {
         this.store_name = store_name;
         this.name = name;
         this.category = category;
         this.price = price;
         this.count = count;
+        this.menu_seq = menu_seq;
     }
 
     public String getStore_name() {
@@ -53,5 +55,13 @@ public class Menu {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public int getMenu_seq() {
+        return menu_seq;
+    }
+
+    public void setMenu_seq(int menu_seq) {
+        this.menu_seq = menu_seq;
     }
 }
