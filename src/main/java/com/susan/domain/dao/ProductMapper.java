@@ -17,5 +17,6 @@ public interface ProductMapper {
     //물품 삭제 SQL
     Integer deleteProduct(int seq);
 
+    //모든 물품을 보는 SQL
     List<Product> findProduct();
 }
