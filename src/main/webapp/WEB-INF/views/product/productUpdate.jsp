@@ -13,7 +13,7 @@
 <body>
 <h1> ${seq}번 프로덕트 업데이트 화면</h1>
 
-<form action="/order/update" method="post">
+<form action="/product/update" method="post">
     <input type="number" name="seq" value="${seq}" readonly>
     <input  type="text" placeholder="name" name="name">
     <input  type="text" placeholder="category" name="category">
