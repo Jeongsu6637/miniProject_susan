@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.susan.domain.dao.StoreMapper">
+
+    <select id="findAllMenu"  resultType="com.susan.domain.entity.Menu" parameterType="int">
+        select store_name,name,category,price,count
+        from menu as m
+                 join store as s on m.store_seq =s.store_seq
+                 join product as p on  m.pro_seq =p.pro_seq
+        where m.store_seq = #{store_seq};
+    </select>
+
+</mapper>

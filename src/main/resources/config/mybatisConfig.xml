@@ -6,5 +6,7 @@
     <typeAliases>
         <typeAlias type="com.susan.domain.entity.Product"
                    alias="Product" />
+        <typeAlias type="com.susan.domain.entity.Store"
+                   alias="Store" />
     </typeAliases>
 </configuration>
