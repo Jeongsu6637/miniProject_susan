@@ -19,24 +19,4 @@
     <select id="findProduct" resultType="Product">
         select * from product;
     </select>
-
-
-=======
-    <!--    내가 좋아요를 눌렀으면 1이 나오고 안눌렀으면 0이 나온다 -->
-    <insert id="insertProduct" useGeneratedKeys="true" >
-        <!--        result 값을 구하는 쿼리 -->
-        insert into product (name,category) values (#{product_name},#{category});
-    </insert>
->>>>>>> origin/thkim
-    <!--    내가 게시글에 좋아요를 누르면 +1 이미 눌렀던 게시글을 한번 더 누르면 -1 -->
-<!--    <insert id="updateHearts">-->
-<!--        <choose>-->
-<!--            <when test="result == 0">-->
-<!--                insert into hearts (uid, tid) values (#{uid}, #{tid});-->
-<!--            </when>-->
-<!--            <otherwise>-->
-<!--                delete from hearts where uid = #{uid} and tid = #{tid};-->
-<!--            </otherwise>-->
-<!--        </choose>-->
-<!--    </insert>-->
 </mapper>
