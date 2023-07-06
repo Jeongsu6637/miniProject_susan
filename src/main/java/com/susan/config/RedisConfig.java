@@ -1,9 +1,12 @@
 package com.susan.config;
+
+import com.susan.domain.entity.User;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.susan.domain.entity.User;
+import io.lettuce.core.dynamic.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -64,6 +67,4 @@ public class RedisConfig {
         redisTemplate.setHashValueSerializer(serializer);
         return redisTemplate;
     }
-
-
 }
