@@ -1,21 +1,29 @@
-package com.susan.domain.entity;
+package com.susan.domain.dto;
 
-public class entity {
-    // db 테이블 자체 다 가져옴
+public class singupDto {
+    //id, pw, name, address, phone, type
+    // 실제 db값
+
+    //생성자, 기본생성자, getter, setter
+
     private String id;
     private String password;
     private String name;
     private String address;
     private String phone;
-    private int type;
+    private int idType;
 
-    public entity(String id, String password, String name, String address, String phone, int type) {
+    public singupDto(String id, String password, String name, String address, String phone, int idType) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.type = type;
+        this.idType = idType;
+    }
+
+    public singupDto() {
+
     }
 
     public String getId() {
@@ -58,11 +66,11 @@ public class entity {
         this.phone = phone;
     }
 
-    public int getType() {
-        return type;
+    public int getIdType() {
+        return idType;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setIdType(int idType) {
+        this.idType = idType;
     }
 }

@@ -1,21 +1,27 @@
-package com.susan.domain.entity;
+package com.susan.domain.request;
 
-public class entity {
-    // db 테이블 자체 다 가져옴
+public class SignupRequest {
+
+    // 회원가입 시 받아올 정보
+    // jsp 변수와 같아야 한다.
     private String id;
     private String password;
     private String name;
     private String address;
     private String phone;
-    private int type;
 
-    public entity(String id, String password, String name, String address, String phone, int type) {
+    private Integer idType;
+
+//    private int mode; // 회원가입 모드(1: 관리자, 2: 일반 유저)
+
+
+    public SignupRequest(String id, String password, String name, String address, String phone, Integer idType) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.type = type;
+        this.idType = idType;
     }
 
     public String getId() {
@@ -58,11 +64,11 @@ public class entity {
         this.phone = phone;
     }
 
-    public int getType() {
-        return type;
+    public Integer getIdType() {
+        return idType;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setIdType(Integer idType) {
+        this.idType = idType;
     }
 }
