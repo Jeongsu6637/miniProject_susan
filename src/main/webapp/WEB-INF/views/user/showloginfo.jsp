@@ -15,8 +15,8 @@
 <body>
 <h1>회원 정보</h1>
 
-<p>ID: ${id}</p>
-<p>Password: ${pw}</p>
+<p>아이디: ${id}</p>
+<p>비밀번호: ${pw}</p>
 <a href="/user/login">로그인하기</a>
 </body>
 </html>

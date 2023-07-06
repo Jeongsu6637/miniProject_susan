@@ -24,4 +24,7 @@ public class UserService {
     public User idFind(IdFindRequest idFindRequest) {
         return userMapper.idFind(idFindRequest);
     }
+    public User userUpdate(User user) {
+        return userMapper.userUpdate(user);
+    }
 }

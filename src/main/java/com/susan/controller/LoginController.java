@@ -44,7 +44,9 @@ public class LoginController {
 
             if (login.getId().equals("admin")) {
                 mav.setViewName("/user/admin");
-            } else {
+            } else if(login.getIdType() == 1) {
+                mav.setViewName("redirect:/user/dvr");
+            } else if(login.getIdType() == 2) {
                 mav.setViewName("redirect:/main/main");
             }
         } else {
@@ -78,15 +80,15 @@ public class LoginController {
 
         return mav;
     }
+    @GetMapping ("/user/mypage")
+    public ModelAndView userUpdate(User user){
+        ModelAndView mav = new ModelAndView();
+        userService.userUpdate(user);
+        mav.addObject("infolist", user);
+        return mav;
+    }
 
 
-//    @GetMapping("/user/showloginfo")
-//    public ModelAndView getShowLogInfo(
-//            ModelAndView mav, HttpSession session) {
-//        //String phone = (String) session.getAttribute("phone");
-//        mav.setViewName("/user/showloginfo");
-//        return mav;
-//    }
 
 }
 

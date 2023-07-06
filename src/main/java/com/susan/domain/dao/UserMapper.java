@@ -9,4 +9,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper {
     User login(LoginRequest request);
     User idFind(IdFindRequest idFindRequest);
+    User userUpdate(User user);
 }
