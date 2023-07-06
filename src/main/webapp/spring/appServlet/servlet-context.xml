@@ -5,7 +5,6 @@
              xmlns:beans="http://www.springframework.org/schema/beans"
              xmlns:context="http://www.springframework.org/schema/context"
              xmlns:mongo="http://www.springframework.org/schema/data/mongo"
-             xmlns:mvc="http://www.springframework.org/schema/c"
              xsi:schemaLocation="
         http://www.springframework.org/schema/data/mongo
         https://www.springframework.org/schema/data/mongo/spring-mongo.xsd

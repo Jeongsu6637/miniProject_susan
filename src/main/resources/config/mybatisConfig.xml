@@ -10,5 +10,7 @@
                    alias="User" />
         <typeAlias type="com.susan.domain.dto.singupDto"
                    alias="singupDto"/>
+        <typeAlias type="com.susan.domain.entity.Product"
+                   alias="Product" />
     </typeAliases>
 </configuration>
