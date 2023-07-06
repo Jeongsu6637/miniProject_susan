@@ -14,5 +14,9 @@
                    alias="Product" />
         <typeAlias type="com.susan.domain.entity.Store"
                    alias="Store" />
+        <typeAlias type="com.susan.domain.entity.SearchByKeyword"
+                   alias="SearchByKeyword" />
+        <typeAlias type="com.susan.domain.request.ShowDetailRequest"
+                   alias="ShowDetailRequest" />
     </typeAliases>
 </configuration>
