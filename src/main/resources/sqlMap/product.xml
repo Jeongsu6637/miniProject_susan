@@ -16,6 +16,10 @@
         delete from product where pro_seq=#{seq};
     </delete>
 
+    <select id="findProduct" resultType="Product">
+        select * from product;
+    </select>
+
 
     <!--    내가 게시글에 좋아요를 누르면 +1 이미 눌렀던 게시글을 한번 더 누르면 -1 -->
 <!--    <insert id="updateHearts">-->

@@ -6,6 +6,8 @@ import com.susan.domain.request.ProductInsertRequest;
 import com.susan.domain.request.ProductUpdateRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
 
@@ -30,5 +32,11 @@ public class ProductService {
     public void deleteProduct(int seq){
 
         productMapper.deleteProduct(seq);
+    }
+
+    public List<Product> findAllProduct(){
+        List<Product> product = productMapper.findProduct();
+
+        return product;
     }
 }

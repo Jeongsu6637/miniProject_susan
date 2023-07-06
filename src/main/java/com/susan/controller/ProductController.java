@@ -1,12 +1,15 @@
 package com.susan.controller;
 
 
+import com.susan.domain.entity.Product;
 import com.susan.domain.request.ProductInsertRequest;
 import com.susan.domain.request.ProductUpdateRequest;
 import com.susan.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/product")
@@ -18,13 +21,24 @@ public class ProductController {
         this.productService = productService;
     }
 
+    @GetMapping
+    public ModelAndView AllProduct(ModelAndView mav){
+
+        List<Product> allProduct = productService.findAllProduct();
+
+        mav.addObject("products",allProduct);
+        mav.setViewName("product/productAll");
+
+        return mav;
+    }
+
     /**
      * GetMapping : 물건 삽입하는 요청
      * @return
      */
     @GetMapping("/insert")
     public String inProduct(){
-        return "/product/product";
+        return "product/productInsert";
     }
 
     /**

@@ -4,6 +4,8 @@ import com.susan.domain.entity.Order;
 import com.susan.domain.entity.Product;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface ProductMapper {
     // 물품 등록 SQL
@@ -14,4 +16,6 @@ public interface ProductMapper {
 
     //물품 삭제 SQL
     Integer deleteProduct(int seq);
+
+    List<Product> findProduct();
 }
