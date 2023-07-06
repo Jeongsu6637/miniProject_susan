@@ -1,4 +1,4 @@
-package com.test.config;
+package com.susan.config;
 import io.lettuce.core.dynamic.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

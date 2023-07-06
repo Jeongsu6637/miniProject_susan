@@ -1,6 +1,7 @@
 package com.susan.controller;
 
 import com.susan.domain.entity.User;
+import com.susan.domain.request.IdFindRequest;
 import com.susan.domain.request.LoginRequest;
 import com.susan.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -19,23 +20,62 @@ public class LoginController {
         this.userService = userService;
     }
 
-    @GetMapping("/login")
+    // GET 로그인 페이지
+    @GetMapping("/user/login")
     public String getLoginPage() {
         return "/user/login";
     }
 
-    @PostMapping("/login")
+    // POST 로그인 페이지
+    @PostMapping("/user/login")
     public ModelAndView postLogin(
             @ModelAttribute LoginRequest loginRequest,
             ModelAndView mav,
-            HttpSession httpsession
+            HttpSession session
     ) {
         User login = userService.login(loginRequest);
 
+        System.out.println(login);
+
+        if(login!=null){
+            session.setAttribute("id",login.getId());
+            session.setAttribute("password",login.getPassword());
+
+            if (login.getId().equals("admin")) {
+                mav.setViewName("/user/admin");
+            } else {
+                mav.setViewName("redirect:/main/main");
+            }
+        } else {
+            // 로그인 실패 처리 로직
+            mav.setViewName("redirect:/user/login");
+        }
         return mav;
     }
-}
 
+    @GetMapping("/user/idfind")
+    public String getIdFindPage() {
+        return "/user/idfind";
+    }
+
+    @PostMapping("/user/idfind")
+    public String PostIdFind(@ModelAttribute IdFindRequest idFindRequest,
+                             ModelAndView mav,
+                             HttpSession session) {
+        User idFind = userService.idFind(idFindRequest);
+        System.out.println(idFind.getPhone());
+        if (idFind != null) {
+            System.out.println(idFind.getPhone());
+            session.setAttribute("phone",idFind.getPhone());
+            mav.setViewName("/user/showloginfo");
+        } else {
+            mav.addObject("message", "등록된 회원이 아닙니다.");
+            mav.setViewName("redirect:/user/idfind");
+        }
+
+        return null;
+    }
+}
 
 
     //회원가입으로 이동

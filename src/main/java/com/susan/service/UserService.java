@@ -2,6 +2,7 @@ package com.susan.service;
 
 import com.susan.domain.dao.UserMapper;
 import com.susan.domain.entity.User;
+import com.susan.domain.request.IdFindRequest;
 import com.susan.domain.request.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,10 +18,10 @@ public class UserService {
     }
 
     public User login(LoginRequest loginRequest) {
-        try {
-            return userMapper.login(loginRequest);
-        } catch (Exception e) {
-            return null;
-        }
+        return userMapper.login(loginRequest);
+    }
+
+    public User idFind(IdFindRequest idFindRequest) {
+        return userMapper.idFind(idFindRequest);
     }
 }
