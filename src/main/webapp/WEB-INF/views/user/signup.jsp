@@ -1,21 +1,45 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Playdata
-  Date: 2023-06-26
-  Time: 오전 10:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="/resources/css/signup.css" />
 </head>
 <body>
-<form method="post" action="/user/signup">
-    <input type="text" name="id">
-    <input type="text" name="password">
-    <input type="text" name="name">
-    <input type="submit" value="signup">
-</form>
+<div class="container">
+    <h2>회 원 가 입</h2>
+    <form method="post" action="${pageContext.request.contextPath}/user/signup">
+        <table>
+            <tr>
+                <th>아이디 :</th>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <th>비밀번호 :</th>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <th>이름 :</th>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <th>주소 :</th>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <th>전화번호 :</th>
+                <td><input type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <td><input type='hidden' name='idType' value='1' /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="가입하기">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <a href="/user/login">로그인</a>
+</div>
 </body>
 </html>

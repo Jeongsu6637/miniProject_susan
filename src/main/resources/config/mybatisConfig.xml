@@ -4,6 +4,12 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
+<!--        <typeAlias type="com.naver.user.domain.entity.TodoJoinUser"-->
+<!--                   alias="TodoJoinUser" />-->
+        <typeAlias type="com.susan.domain.entity.User"
+                   alias="User" />
+        <typeAlias type="com.susan.domain.dto.singupDto"
+                   alias="singupDto"/>
         <typeAlias type="com.susan.domain.entity.Product"
                    alias="Product" />
         <typeAlias type="com.susan.domain.entity.Store"
