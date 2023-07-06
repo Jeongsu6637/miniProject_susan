@@ -4,16 +4,15 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.susan.domain.dao.UserMapper">
 
-    <insert id="signup" useGeneratedKeys="true" keyProperty="id">
-        insert into users (username, password, name)
-        values (#{id}, #{pw}, #{name})
+    <insert id="signup" parameterType="singupDto">
+        insert into user (id, password, name, address, phone, id_type)
+        values (#{id}, #{password}, #{name}, #{address}, #{phone}, #{idType})
     </insert>
-    <update id="update">
-        update users
-        <set>
-            <if test="name != ''">name=#{name}</if>
-            <if test="password != ''">password=#{password}</if>
-        </set>
-        where id = #{id}
-    </update>
+
+    <select resultType="String" id="equalCheck">
+        select
+        id
+        from user
+        where id = #{userid}
+    </select>
 </mapper>

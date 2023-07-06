@@ -8,5 +8,7 @@
 <!--                   alias="TodoJoinUser" />-->
         <typeAlias type="com.susan.domain.entity.User"
                    alias="User" />
+        <typeAlias type="com.susan.domain.dto.singupDto"
+                   alias="singupDto"/>
     </typeAliases>
 </configuration>

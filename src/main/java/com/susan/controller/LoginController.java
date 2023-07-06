@@ -3,6 +3,7 @@ package com.susan.controller;
 import com.susan.domain.entity.User;
 import com.susan.domain.request.IdFindRequest;
 import com.susan.domain.request.LoginRequest;
+import com.susan.domain.request.UserUpdateRequest;
 import com.susan.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,13 +41,12 @@ public class LoginController {
 
         if(login!=null){
             session.setAttribute("id",login.getId());
-            session.setAttribute("password",login.getPassword());
 
             if (login.getId().equals("admin")) {
                 mav.setViewName("/user/admin");
-            } else if(login.getIdType() == 1) {
-                mav.setViewName("redirect:/user/dvr");
             } else if(login.getIdType() == 2) {
+                mav.setViewName("redirect:/user/dvr");
+            } else if(login.getIdType() == 1) {
                 mav.setViewName("redirect:/main/main");
             }
         } else {
@@ -80,14 +80,6 @@ public class LoginController {
 
         return mav;
     }
-    @GetMapping ("/user/mypage")
-    public ModelAndView userUpdate(User user){
-        ModelAndView mav = new ModelAndView();
-        userService.userUpdate(user);
-        mav.addObject("infolist", user);
-        return mav;
-    }
-
 
 
 }
