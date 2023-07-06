@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -59,22 +60,34 @@ public class LoginController {
     }
 
     @PostMapping("/user/idfind")
-    public String PostIdFind(@ModelAttribute IdFindRequest idFindRequest,
-                             ModelAndView mav,
-                             HttpSession session) {
+    public ModelAndView PostIdFind(@ModelAttribute IdFindRequest idFindRequest,
+                                   ModelAndView mav,
+                                   HttpSession session) {
         User idFind = userService.idFind(idFindRequest);
         System.out.println(idFind.getPhone());
         if (idFind != null) {
             System.out.println(idFind.getPhone());
             session.setAttribute("phone",idFind.getPhone());
+            mav.addObject("id", idFind.getId());
+            mav.addObject("pw", idFind.getPassword());
             mav.setViewName("/user/showloginfo");
         } else {
             mav.addObject("message", "등록된 회원이 아닙니다.");
             mav.setViewName("redirect:/user/idfind");
         }
 
-        return null;
+        return mav;
     }
+
+
+//    @GetMapping("/user/showloginfo")
+//    public ModelAndView getShowLogInfo(
+//            ModelAndView mav, HttpSession session) {
+//        //String phone = (String) session.getAttribute("phone");
+//        mav.setViewName("/user/showloginfo");
+//        return mav;
+//    }
+
 }
 
 

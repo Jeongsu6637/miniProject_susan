@@ -15,7 +15,7 @@
     <input type="text" name="id">
     <input type="text" name="password">
     <input type="text" name="name">
-    <input type="submit" value="signup">
+    <input type="submit" value="">
 </form>
 </body>
 </html>

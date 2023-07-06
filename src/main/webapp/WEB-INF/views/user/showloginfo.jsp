@@ -13,10 +13,10 @@
     <title>로그인 정보</title>
 </head>
 <body>
-<h1>로그인 정보</h1>
-<form method="get" action="/user/showloginfo">
+<h1>회원 정보</h1>
+
 <p>ID: ${id}</p>
-<p>Password: ${password}</p>
-</form>
+<p>Password: ${pw}</p>
+<a href="/user/login">로그인하기</a>
 </body>
 </html>
