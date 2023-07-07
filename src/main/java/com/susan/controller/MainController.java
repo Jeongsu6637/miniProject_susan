@@ -9,11 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/front")
 public class MainController {
 
-    @GetMapping
-    public ModelAndView showMainPage() {
+    @GetMapping("/admin")
+    public ModelAndView showAdminPage() {
         ModelAndView mav = new ModelAndView();
-        // 필요한 데이터 처리 및 뷰 설정
-        mav.setViewName("main"); // main.jsp의 이름
+        mav.setViewName("/front/admin");
         return mav;
     }
 }

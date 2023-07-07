@@ -10,11 +10,21 @@
 
     <header>
         <img src="/resources/img/소래포구.png" alt="로고 이미지" class="logo">
-
     </header>
 
-        <a href="/user/login">로그인</a>
-        <a href="/user/signup">회원가입</a>
+    <c:choose>
+        <c:when test="${empty sessionScope.id}">
+            <div class="user-menu">
+                <a href="/user/login">로그인</a>
+                <a href="/user/signup">회원가입</a>
+            </div>
+        </c:when>
+        <c:otherwise>
+            <div class="user-menu">
+                <a href="/user/mypage?userId=${id}">마이 페이지</a>
+            </div>
+        </c:otherwise>
+    </c:choose>
 
     <div class="search-form">
         <form method="post" action="/front/main">

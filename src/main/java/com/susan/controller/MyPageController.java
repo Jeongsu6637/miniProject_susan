@@ -3,13 +3,14 @@ package com.susan.controller;
 import com.susan.domain.entity.User;
 import com.susan.domain.request.UserUpdateRequest;
 import com.susan.service.UserService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
-
+@Controller
 public class MyPageController {
     private final UserService userService;
 
@@ -19,8 +20,9 @@ public class MyPageController {
     // 회원정보 수정
     // 내 주문 조회
     @GetMapping("/user/mypage")
-    public ModelAndView userUpdatePage(ModelAndView mav,
+    public ModelAndView userUpdatePage(ModelAndView mav,HttpSession session,
                                        @RequestParam(value = "userId", required = false) String userId){
+
         User user = userService.findUser(userId);
         mav.addObject("user", user);
         mav.setViewName("/user/mypage");
@@ -35,8 +37,9 @@ public class MyPageController {
                                    @RequestParam("address") String address,
                                    @RequestParam("phone") String phone
     ) {
-        UserUpdateRequest request = new UserUpdateRequest("admin", password, username, address, phone);
-        //UserUpdateRequest request = new UserUpdateRequest((String)session.getAttribute("id"), password, username, address, phone);
+        //UserUpdateRequest request = new UserUpdateRequest(, password, username, address, phone);
+        System.out.println((String)session.getAttribute("id"));
+        UserUpdateRequest request = new UserUpdateRequest((String)session.getAttribute("id"), password, username, address, phone);
         int result = userService.userUpdate(request);
 
         if (result > 0)
@@ -45,7 +48,7 @@ public class MyPageController {
             System.out.println("실패");
 
         // mav.addObject("user", user);
-        mav.setViewName("redirect:/user/mypage?userId=admin");
+        mav.setViewName("redirect:/user/mypage");
         return mav;
     }
     //가게 사장일 경우 (권한이 2) 일경우만 노출되는 메뉴

@@ -45,12 +45,11 @@ public class LoginController {
         if(login!=null){
             session.setAttribute("id",login.getId());
 
-            if (login.getId().equals("admin")) {
-                mav.setViewName("/user/admin");
-            } else if(login.getIdType() == 2) {
-                mav.setViewName("redirect:/front/detail");
-            } else if(login.getIdType() == 1) {
+            if
+            (login.getIdType() == 1) {
                 mav.setViewName("redirect:/front/main");
+            } else if(login.getIdType() == 2) {
+                mav.setViewName("redirect:/front/admin");
             }
         } else {
             // 로그인 실패 처리 로직
