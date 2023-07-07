@@ -68,7 +68,7 @@ public class SignupController {
         String reqId = userService.equalCheck(signupRequest.getId());
 
         if (reqId == null || reqId.equals("")) {
-            if (userService.signup(signupRequest))
+            if (userService.signupAsUser(signupRequest))
                 mav.setViewName("redirect:/user/login");
             else
                 mav.setViewName("redirect:/user/signup");

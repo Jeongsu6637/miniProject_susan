@@ -10,23 +10,23 @@
     <form method="post" action="${pageContext.request.contextPath}/user/signup">
         <table>
             <tr>
-                <th>아이디 :</th>
+                <th>아이디</th>
                 <td><input type="text" name="id"></td>
             </tr>
             <tr>
-                <th>비밀번호 :</th>
+                <th>비밀번호</th>
                 <td><input type="password" name="password"></td>
             </tr>
             <tr>
-                <th>이름 :</th>
+                <th>이름</th>
                 <td><input type="text" name="name"></td>
             </tr>
             <tr>
-                <th>주소 :</th>
+                <th>주소</th>
                 <td><input type="text" name="address"></td>
             </tr>
             <tr>
-                <th>전화번호 :</th>
+                <th>전화번호</th>
                 <td><input type="text" name="phone"></td>
             </tr>
             <tr>

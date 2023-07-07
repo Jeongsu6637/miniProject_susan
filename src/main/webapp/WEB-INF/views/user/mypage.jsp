@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>마이 페이지</title>
+    <link rel="stylesheet" type="text/css" href="/resources/css/mypage.css" />
 </head>
 <body>
 <form action="/user/mypage" method="post">

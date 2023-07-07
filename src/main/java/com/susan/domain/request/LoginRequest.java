@@ -3,7 +3,6 @@ package com.susan.domain.request;
 public class LoginRequest {
     private String id;
     private String password;
-    private int idType;
 
     public String getId() {
         return id;
@@ -21,17 +20,8 @@ public class LoginRequest {
         this.password = password;
     }
 
-    public int getIdType() {
-        return idType;
-    }
-
-    public void setIdType(int idType) {
-        this.idType = idType;
-    }
-
-    public LoginRequest(String id, String password, int idType) {
+    public LoginRequest(String id, String password) {
         this.id = id;
         this.password = password;
-        this.idType = idType;
     }
 }

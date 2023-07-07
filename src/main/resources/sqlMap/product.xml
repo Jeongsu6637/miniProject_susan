@@ -19,7 +19,7 @@
     <select id="findProduct" resultType="Product">
         select * from product;
     </select>
-<mapper namespace="com.susan.domain.dao.ProductMapper">
+
     <select id="searchDefault" resultType="SearchByKeyword" parameterType="String" >
         select s.store_name, image_link
         from Product as p

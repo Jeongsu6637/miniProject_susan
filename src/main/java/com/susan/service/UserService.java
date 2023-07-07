@@ -65,13 +65,7 @@ public class UserService {
         return userMapper.userupdate(request);
     }
     // 회원가입 요청 처리
-    public boolean signup(SignupRequest signupRequest) {
-//        if (isUsernameExists(signupRequest.getName()) {
-//            return false; // 이미 아이디가 존재하면 회원가입 실패
-//        }
-        // 반환값이 0이 아니면 회원가입 성공
-        return userMapper.signup(signupRequest) != 0;
-    }
+
 
     public String equalCheck(String userid){
         return userMapper.equalCheck(userid);

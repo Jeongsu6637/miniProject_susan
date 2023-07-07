@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping("/front")
 public class MainController {
 
-
-    //login 이동
+    @GetMapping
+    public ModelAndView showMainPage() {
+        ModelAndView mav = new ModelAndView();
+        // 필요한 데이터 처리 및 뷰 설정
+        mav.setViewName("main"); // main.jsp의 이름
+        return mav;
+    }
 }

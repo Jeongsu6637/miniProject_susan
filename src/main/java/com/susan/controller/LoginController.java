@@ -31,11 +31,14 @@ public class LoginController {
     // POST 로그인 페이지
     @PostMapping("/user/login")
     public ModelAndView postLogin(
-            @ModelAttribute LoginRequest loginRequest,
+            @RequestParam("id") String id,
+            @RequestParam("password") String password,
             ModelAndView mav,
             HttpSession session
     ) {
-        User login = userService.login(loginRequest);
+
+        LoginRequest request = new LoginRequest(id, password);
+        User login = userService.login(request);
 
         System.out.println(login);
 
@@ -45,9 +48,9 @@ public class LoginController {
             if (login.getId().equals("admin")) {
                 mav.setViewName("/user/admin");
             } else if(login.getIdType() == 2) {
-                mav.setViewName("redirect:/user/dvr");
+                mav.setViewName("redirect:/front/detail");
             } else if(login.getIdType() == 1) {
-                mav.setViewName("redirect:/main/main");
+                mav.setViewName("redirect:/front/main");
             }
         } else {
             // 로그인 실패 처리 로직
