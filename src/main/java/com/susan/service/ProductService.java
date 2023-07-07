@@ -90,44 +90,6 @@ public class ProductService implements ProductServiceImpl{
 
         return product;
     }
-    @Override
-    public List<SearchByKeyword> searchDefault(String keyword) {
-        if(list == null && keyword == null){
-            list = productMapper.searchDefault(keyword);
-
-        }
-        if(keyword != null) {
-            keyword = "%" + keyword + "%";
-            List<SearchByKeyword> Keyword = productMapper.searchDefault(keyword);
-            return Keyword;
-        }
-        return list;
-
-    }
-    @Override
-    public List<SearchByKeyword> searchDesc(String keyword) {
-        if(keyword != null) {
-            keyword = "%" + keyword + "%";
-            List<SearchByKeyword> Keyword = productMapper.searchDesc(keyword);
-            return Keyword;
-        }
-        return list;
-    }
-    @Override
-    public List<SearchByKeyword> searchAsc(String keyword) {
-        if(keyword != null) {
-            keyword = "%" + keyword + "%";
-            List<SearchByKeyword> Keyword = productMapper.searchAsc(keyword);
-            return Keyword;
-        }
-        return list;
-    }
-
-    @Override
-    public List<ShowDetailRequest> showDetail(String name) {
-        List<ShowDetailRequest> storename = productMapper.showDetail(name);
-        return storename;
-    }
 
 
 }

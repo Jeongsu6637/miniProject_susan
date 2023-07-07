@@ -54,39 +54,6 @@
         select * from product;
     </select>
 
-    <select id="searchDefault" resultType="SearchByKeyword" parameterType="String" >
-        select s.store_name, image_link
-        from Product as p
-        inner Join Menu as m on p.pro_seq = m.pro_seq
-        inner join Store as s on m.store_seq = s.store_seq
-        where name like #{keyword};
-    </select>
-
-    <select id="searchDesc" resultType="SearchByKeyword" parameterType="String" >
-        select s.store_name, s.image_link
-        from Product as p
-        inner Join Menu as m on p.pro_seq = m.pro_seq
-        inner join Store as s on m.store_seq = s.store_seq
-        where p.name like #{keyword}
-        order by m.price desc;
-    </select>
-
-    <select id="searchAsc" resultType="SearchByKeyword" parameterType="String" >
-        select s.store_name, s.image_link
-        from Product as p
-        inner Join Menu as m on p.pro_seq = m.pro_seq
-        inner join Store as s on m.store_seq = s.store_seq
-        where p.name like #{keyword}
-        order by m.price asc;
-    </select>
-
-    <select id="showDetail" resultType="ShowDetailRequest" parameterType="String" >
-        select s.store_name, s.image_link, s.store_number, s.location, p.name, m.price
-        from Product as p
-        inner Join Menu as m on p.pro_seq = m.pro_seq
-        inner join Store as s on m.store_seq = s.store_seq
-        where s.store_name = #{name} ;
-    </select>
 
 
 </mapper>
