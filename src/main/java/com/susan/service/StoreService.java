@@ -31,4 +31,8 @@ public class StoreService {
     public List<MyCart> AllCart(int userSeq){
         return storeMapper.AllCart(userSeq);
     }
+
+    public int finduserseq (String id){
+        return storeMapper.finduserseq(id);
+    }
 }
