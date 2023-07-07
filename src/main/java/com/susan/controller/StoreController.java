@@ -1,15 +1,13 @@
 package com.susan.controller;
 
-import com.susan.domain.entity.Cart;
-import com.susan.domain.entity.Menu;
-import com.susan.domain.entity.MyCart;
-import com.susan.domain.entity.Store;
+import com.susan.domain.entity.*;
 import com.susan.domain.request.CartRequest;
 import com.susan.service.StoreService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -97,13 +95,14 @@ public class StoreController {
     }
 
     @GetMapping("/cart")
-    public ModelAndView AllCart(ModelAndView mav){
+    public ModelAndView AllCart(ModelAndView mav, HttpSession session){
         /*
         * 8번
         * */
 
         // 내 장바구니 리스트를 전부 보여주는 로직인데 아직 회원가입이 없어서 일단 user_seq를 1로 해놓음.
-        List<MyCart> cartList = storeService.AllCart(1);
+        int seq = storeService.finduserseq((String)session.getAttribute("id"));
+        List<MyCart> cartList = storeService.AllCart(seq);
 
         // 내 장바구니 리스트를 cartlist 라는 변수로 담아서 /main/cart.jsp 보내줌!
         mav.addObject("cartlist",cartList);
