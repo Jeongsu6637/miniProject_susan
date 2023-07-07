@@ -11,27 +11,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Detail</title>
-    <link rel="stylesheet" href="../resources/main.css">
+    <link rel="stylesheet" href="../resources/detail.css">
 </head>
 <body>
-    <form method="post" action="/front/detail">
-        <div class="detail">
-            <td>
-                <div class="image_link"><img src="${image_link}"></div>
-            </td>
-            <div class="info">
-                <p>상호명 : ${store_name}</p>
-                <p>전화번호 : ${store_number}</p>
-                <p>주소 : ${location}</p>
+<form method="post" action="/front/detail">
+    <div class="detail">
+        <div class="image_link"><img src="${image_link}"></div>
+        <div class="info">
+            <span class="storeInfo">
+                <p>상호명: ${store_name}</p>
+                <p>전화번호: ${store_number}</p>
+                <p>주소: ${location}</p>
+            </span>
+            <p style="color:midnightblue;">판매상품 목록</p>
+            <div class="menu">
                 <c:forEach items="${showList}" var = "detail">
                     <ul>
-                        <li>${detail.name}</li>
-                        <li>${detail.price}</li>
+                        <li>상품명: ${detail.name}</li>
+                        <li>가격: ${detail.price}원</li>
                     </ul>
                 </c:forEach>
             </div>
-
         </div>
-    </form>
+    </div>
+</form>
 </body>
 </html>

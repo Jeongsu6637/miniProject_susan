@@ -1,19 +1,58 @@
+body {
+    background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MTZfNzEg%2FMDAxNjg0MTk3NjY1NTQz.PpAceIKgH5d3cfRANY3snGRsg0DKZ6Ou12yfjQ1zcRYg.VWKInVzClF0vcN4n-94eq8rGc53u6LvDBHAT0l536Qcg.JPEG.chldbsk332%2FKakaoTalk_20230516_093531138_08.jpg&type=a340");
+    /*background-color: midnightblue;*/
+    margin: 20px;
+    padding: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: midnightblue;
+}
+
 .image_link {
-    width: 100%;
-    height: 698px;
-    position: relative;
+    margin-bottom: 20px;
 }
 
-form div td div {
-    max-width: 100px;
-    max-height: 70px;
-}
-form div td {
-    justify-content: center;
+.image_link img {
+    max-width: 500px;
+    max-height: 400px;
 }
 
-form div .info p {
-    font-size: 20px;
+.info .storeInfo {
+    border: solid midnightblue 1px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info .storeInfo p {
+    margin: 0;
     font-weight: bold;
+    font-size: 16px;
+    color: midnightblue;
+}
 
+.menu {
+    border: solid black 1px;
+    border-radius: 4px;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    color: midnightblue;
+    margin-bottom: 10px;
 }

@@ -29,5 +29,5 @@
     <beans:bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <beans:constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
     </beans:bean>
-    <resources mapping="/**" location="/resources" />
+    <resources mapping="/resources/**" location="/resources/" />
 </beans:beans>
