@@ -11,11 +11,11 @@
     <h1>회원 정보</h1>
     <table>
         <tr>
-            <th>아이디:</th>
+            <th>아이디</th>
             <td>${id}</td>
         </tr>
         <tr>
-            <th>비밀번호:</th>
+            <th>비밀번호</th>
             <td>${pw}</td>
         </tr>
     </table>

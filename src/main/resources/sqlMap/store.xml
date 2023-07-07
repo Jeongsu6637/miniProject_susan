@@ -16,5 +16,10 @@
         JOIN Menu m ON c.pro_seq = m.pro_seq AND c.store_seq = m.store_seq
         WHERE c.user_seq = #{userSeq};
     </select>
-
+    <select id="finduserseq" resultType="int" parameterType="String">
+        SELECT user_seq
+        from user
+        where user.id = #{id}
+    </select>
 </mapper>
+
