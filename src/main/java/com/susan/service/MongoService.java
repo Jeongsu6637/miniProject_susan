@@ -1,7 +1,7 @@
 package com.susan.service;
 
 
-import com.susan.domain.dao.MongoRepository;
+import com.susan.dao.MongoRepository;
 import com.susan.domain.entity.MongoOrderInfo;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

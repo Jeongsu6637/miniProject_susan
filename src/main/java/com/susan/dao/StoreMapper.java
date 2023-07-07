@@ -1,6 +1,5 @@
-package com.susan.domain.dao;
+package com.susan.dao;
 
-import com.susan.domain.entity.Cart;
 import com.susan.domain.entity.Menu;
 import com.susan.domain.entity.MyCart;
 import com.susan.domain.entity.Store;

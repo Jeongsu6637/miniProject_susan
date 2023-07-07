@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.susan.domain.dao.UserMapper">
+<mapper namespace="com.susan.dao.UserMapper">
     <select id="login" resultType="User" parameterType="com.susan.domain.request.LoginRequest">
         SELECT
         *

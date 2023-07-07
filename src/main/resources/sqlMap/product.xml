@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.susan.domain.dao.ProductMapper">
+<mapper namespace="com.susan.dao.ProductMapper">
     <select id="searchDefault" resultType="SearchByKeyword" parameterType="String" >
         select s.store_name, image_link
         from Product as p

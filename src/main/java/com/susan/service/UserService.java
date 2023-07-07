@@ -1,6 +1,6 @@
 package com.susan.service;
 
-import com.susan.domain.dao.UserMapper;
+import com.susan.dao.UserMapper;
 import com.susan.domain.entity.User;
 import com.susan.domain.request.IdFindRequest;
 import com.susan.domain.request.LoginRequest;

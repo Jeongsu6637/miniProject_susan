@@ -1,4 +1,4 @@
-package com.susan.domain.dao;
+package com.susan.dao;
 
 import com.susan.domain.entity.User;
 import com.susan.domain.request.IdFindRequest;

@@ -1,12 +1,9 @@
-package com.susan.domain.dao;
+package com.susan.dao;
 
 
 import com.susan.domain.entity.SearchByKeyword;
 import com.susan.domain.request.ShowDetailRequest;
-import com.susan.domain.entity.Order;
 import com.susan.domain.entity.Product;
-import com.susan.domain.entity.SearchByKeyword;
-import com.susan.domain.request.ShowDetailRequest;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

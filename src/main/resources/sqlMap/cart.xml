@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.susan.domain.dao.StoreMapper">
+<mapper namespace="com.susan.dao.StoreMapper">
 
     <insert id="addCart" parameterType="com.susan.domain.request.CartRequest">
         insert into cart(user_seq, store_seq, pro_seq) values(#{user_seq}, #{store_seq}, #{product_seq});

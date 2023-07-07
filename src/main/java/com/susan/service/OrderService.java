@@ -1,6 +1,6 @@
 package com.susan.service;
 
-import com.susan.domain.dao.ProductMapper;
+import com.susan.dao.ProductMapper;
 import com.susan.domain.entity.Product;
 import org.springframework.stereotype.Service;
 
