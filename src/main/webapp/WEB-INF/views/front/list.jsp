@@ -10,9 +10,7 @@
 <table>
     <tr>
         <td><a href="/front/main?keyword=${keyword}&category=a" class="${param.category == 'a' ? 'active' : ''}">기본순</a></td>
-        <td></td> <!-- 빈 셀 -->
         <td><a href="/front/main?keyword=${keyword}&category=b" class="${param.category == 'b' ? 'active' : ''}">가격이 높은순</a></td>
-        <td></td> <!-- 빈 셀 -->
         <td><a href="/front/main?keyword=${keyword}&category=c" class="${param.category == 'c' ? 'active' : ''}">가격이 낮은순</a></td>
     </tr>
     <c:forEach items="${searchlist}" var="search">

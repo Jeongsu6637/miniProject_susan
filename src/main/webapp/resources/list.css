@@ -17,3 +17,7 @@ td a.active {
     font-weight: bold;
     color: red;
 }
+
+td:not(:last-child) {
+    padding-right: 3px;
+}
