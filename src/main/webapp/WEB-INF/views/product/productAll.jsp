@@ -10,18 +10,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../style/product.css">
+</head>
+<body>
 
-    <table>
-        <tr>
-            <td>id</td>
-            <td>물품 이름</td>
-            <td>카테고리</td>
-        </tr>
+<title>Title</title>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>물품 이름</td>
+        <td>카테고리</td>
+    </tr>
     <c:forEach items="${products}" var = "product">
         <tr>
 
-            <form method="post" action="/product/delete?seq=${product.product_seq}">
+           <form method="post" action="/product/delete?seq=${product.product_seq}">
                 <td>${product.product_seq}</td>
                 <td>${product.product_name}</td>
                 <td>${product.category}</td>
@@ -32,9 +36,6 @@
 
         </tr>
     </c:forEach>
-    </table>
-</head>
-<body>
-
+</table>
 </body>
 </html>
