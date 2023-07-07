@@ -1,5 +1,4 @@
 package com.susan.config;
-
 import io.lettuce.core.dynamic.annotation.Value;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -66,6 +65,4 @@ public class RedisConfig {
         redisTemplate.setHashValueSerializer(serializer);
         return redisTemplate;
     }
-
-
 }

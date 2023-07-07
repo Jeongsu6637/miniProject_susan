@@ -53,4 +53,7 @@
     <select id="findProduct" resultType="Product">
         select * from product;
     </select>
+
+
+
 </mapper>

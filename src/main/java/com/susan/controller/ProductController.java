@@ -80,7 +80,7 @@ public class ProductController {
 
     /**
      * 물품 업데이트 처리화면
-     * @param p
+     * @param
      * @return 경로는 아직 미정
      */
     @PostMapping("/update")

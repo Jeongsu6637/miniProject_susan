@@ -1,7 +1,6 @@
 package com.susan.domain.request;
 
 public class ProductUpdateRequest {
-
     private int seq;
 
     private String name;

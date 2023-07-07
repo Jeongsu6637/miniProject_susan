@@ -1,0 +1,40 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F7F9FB;
+    border: 1px solid #E3E9EF;
+    color: #333333;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+input[type="text"],
+input[type="submit"] {
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 1px solid #E3E9EF;
+}
+
+input[type="submit"] {
+    background-color: #3366CC;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1A478B;
+}

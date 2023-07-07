@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F9FB;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #E3E9EF;
+    color: #333333;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #E3E9EF;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    text-align: left;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #F2F2F2;
+    color: #333333;
+    border: 1px solid #E3E9EF;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3366CC;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1A478B;
+}
+
+#id-area, #password-area, #name-area, #address-area, #phone-area {
+    background-color: #F7F9FB;
+}
