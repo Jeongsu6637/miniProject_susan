@@ -36,9 +36,10 @@
                 <td><button type="submit">삭제하기</button></td>
             </form>
 
-
         </tr>
     </c:forEach>
+
+    <a href="/product/insert">물품 추가하기</a>
 </table>
 </body>
 </html>
