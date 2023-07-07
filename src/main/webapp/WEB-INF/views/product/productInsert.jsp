@@ -13,7 +13,7 @@
 <body>
 
     <h1> 물품 입력 화면 </h1>
-    <form action="/order/insert" method="post">
+    <form action="/product/insert" method="post">
       <input  type="text" placeholder="name" name="name">
       <input  type="text" placeholder="category" name="category">
       <button type="submit"> submit </button>

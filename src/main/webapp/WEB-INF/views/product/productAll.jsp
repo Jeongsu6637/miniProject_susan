@@ -20,9 +20,16 @@
         </tr>
     <c:forEach items="${products}" var = "product">
         <tr>
-            <td>${product.product_seq}</td>
-            <td>${product.product_name}</td>
-            <td>${product.category}</td>
+
+            <form method="post" action="/product/delete?seq=${product.product_seq}">
+                <td>${product.product_seq}</td>
+                <td>${product.product_name}</td>
+                <td>${product.category}</td>
+                <td><a href="/product/update?seq=${product.product_seq}">수정하기</a></td>
+                <td><button type="submit">삭제하기</button></td>
+            </form>
+
+
         </tr>
     </c:forEach>
     </table>
