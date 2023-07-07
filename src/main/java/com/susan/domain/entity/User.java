@@ -6,12 +6,17 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 public class User {
+    private int user_seq;
     private String id;
     private String password;
     private String address;
     private String name;
+
     private String phone;
     private int idType;
+
+    public User() {
+    }
 
     @JsonCreator
     public User(@JsonProperty("id") String id,@JsonProperty("password") String password,
@@ -85,5 +90,13 @@ public class User {
 
     public void setIdType(int idType) {
         this.idType = idType;
+    }
+
+    public int getUser_seq() {
+        return user_seq;
+    }
+
+    public void setUser_seq(int user_seq) {
+        this.user_seq = user_seq;
     }
 }
