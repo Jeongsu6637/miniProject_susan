@@ -10,17 +10,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../style/product.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/product.css">
 </head>
 <body>
 
 <title>Title</title>
 
 <table>
+    <h1> 현재 저장된 물품 리스트</h1>
     <tr>
         <td>id</td>
         <td>물품 이름</td>
         <td>카테고리</td>
+        <td></td>
+        <td></td>
     </tr>
     <c:forEach items="${products}" var = "product">
         <tr>
