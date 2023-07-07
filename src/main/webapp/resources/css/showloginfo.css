@@ -1,0 +1,36 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F7F9FB;
+    border: 1px solid #E3E9EF;
+    color: #333333;
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+}
+
+table {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}
+
+a {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #3366CC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

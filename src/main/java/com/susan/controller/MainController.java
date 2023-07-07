@@ -1,5 +1,6 @@
 package com.susan.controller;
 
+
 import com.susan.domain.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

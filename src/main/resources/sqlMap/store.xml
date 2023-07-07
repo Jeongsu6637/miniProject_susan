@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.susan.domain.dao.StoreMapper">
+
+    <select id="findAllStore" resultType="com.susan.domain.entity.Store">
+        select * from store;
+    </select>
+
+    <select id="AllCart" resultType="com.susan.domain.entity.MyCart" parameterType="int">
+        SELECT c.user_seq, c.store_seq, c.pro_seq, p.name, p.category, s.store_name, s.location, s.store_number, m.price, m.count
+        FROM cart c
+        JOIN product p ON c.pro_seq = p.pro_seq
+        JOIN Store s ON c.store_seq = s.store_seq
+        JOIN Menu m ON c.pro_seq = m.pro_seq AND c.store_seq = m.store_seq
+        WHERE c.user_seq = #{userSeq};
+    </select>
+
+</mapper>
