@@ -4,6 +4,10 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
+        <typeAlias type="com.susan.domain.entity.SearchByKeyword"
+                   alias="SearchByKeyword" />
+        <typeAlias type="com.susan.domain.request.ShowDetailRequest"
+                   alias="ShowDetailRequest" />
         <typeAlias type="com.susan.domain.entity.Product"
                    alias="Product" />
     </typeAliases>
