@@ -1,8 +1,15 @@
 package com.susan.controller;
 
-import com.susan.domain.entity.*;
+import com.susan.domain.entity.Menu;
+import com.susan.domain.entity.MyCart;
+import com.susan.domain.entity.Store;
+import com.susan.domain.entity.User;
+
 import com.susan.domain.request.CartRequest;
+import com.susan.domain.request.LoginRequest;
+import com.susan.domain.request.UserUpdateRequest;
 import com.susan.service.StoreService;
+import com.susan.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,10 +21,11 @@ import java.util.List;
 @RequestMapping("/main")
 public class StoreController {
     private final StoreService storeService;
-
-    public StoreController(StoreService storeService) {
+    public StoreController(StoreService storeService, UserService userService) {
         this.storeService = storeService;
     }
+
+
 
     @GetMapping("/store")
     public ModelAndView AllStore(ModelAndView mav){

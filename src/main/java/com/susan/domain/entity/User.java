@@ -6,11 +6,12 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 public class User {
-    private int user_seq; //4
-    private String id; //4
-    private String password; //4
+    private int user_seq;
+    private String id;
+    private String password;
     private String address;
     private String name;
+
     private String phone;
     private int idType;
 
@@ -61,7 +62,7 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-  
+
     public String getAddress() {
         return address;
     }

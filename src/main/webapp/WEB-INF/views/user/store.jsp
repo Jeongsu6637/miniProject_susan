@@ -1,47 +1,98 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Playdata
-  Date: 2023-07-06
-  Time: 오후 3:15
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>가게 보기</title>
+  <title>가게 보기</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F6F6F6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #FFF;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .button-blue {
+      background-color: #2196F3;
+      color: #FFF;
+    }
+  </style>
 </head>
 <body>
+<div class="container">
+  <h2>가게 보기</h2>
   <table>
     <tr>
-      <td>store_seq</td>
-      <td>가게명</td>
-      <td>위치</td>
-      <td>전화번호</td>
-      <td>link</td>
-      <td></td>
+      <th style="padding-right: 20px;">가게 번호</th>
+      <th style="padding-right: 20px;">가게명</th>
+      <th style="padding-right: 20px;">위치</th>
+      <th style="padding-right: 20px;">전화번호</th>
+      <th style="padding-right: 20px;"></th>
+      <th></th>
     </tr>
-    <%--
-    2번
-      storeController 에서 stores 변수를 내려줬기 때문에 여기서 쓸수있는것.. 이제 아래에 상점들어가기쪽을 살펴보자..
-    --%>
     <c:forEach items="${stores}" var="store">
       <tr>
         <td>${store.store_seq}</td>
         <td>${store.store_name}</td>
-        <td>${store.store_name}</td>
+        <td>${store.location}</td>
         <td>${store.store_number}</td>
-        <td>${store.image_link}</td>
-
-        <%--
-        3번
-          상점들어가기를 누르면..
-          /main/menu/?store_seq=상점번호 가 들어가기 때문에 내가 누른 상점의 store_seq가 파라미터로 붙게될거고
-          @GetMapping /main/menu/ 쪽으로 가보면 파라미터를 받을 수 있을것임 가보자..
-        --%>
-        <td><a href="/main/menu?store_seq=${store.store_seq}">상점들어가기</a> </td>
+        <td>
+          <a href="/main/menu?store_seq=${store.store_seq}" style="display: inline-block;">
+            <img src="${store.image_link}" alt="링크 이미지" style="max-width: 150px; max-height: 100px;">
+          </a>
+        </td>
+        <td>
+          <a href="/main/menu?store_seq=${store.store_seq}" class="button button-blue">상점들어가기</a>
+        </td>
       </tr>
     </c:forEach>
   </table>
+</div>
 </body>
 </html>
+
+

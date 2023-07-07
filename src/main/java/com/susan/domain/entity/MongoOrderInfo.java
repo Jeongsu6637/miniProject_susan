@@ -14,7 +14,15 @@ public class MongoOrderInfo {
     private String name;
     private String store;
 
-//    private List<>
+//    private List<Product> products;
+//
+//    public List<Product> getProducts() {
+//        return products;
+//    }
+//
+//    public void setProducts(List<Product> products) {
+//        this.products = products;
+//    }
 
     private String state;
 

@@ -3,11 +3,13 @@ package com.susan.service;
 
 import com.susan.domain.dao.MongoRepository;
 import com.susan.domain.entity.MongoOrderInfo;
+import com.susan.domain.entity.Product;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -26,7 +28,6 @@ public class MongoService {
         mongoOrderInfo.setName("태홍");
         mongoOrderInfo.setStore("A상점");
         mongoOrderInfo.setState("구매요청");
-
         mongoTemplate.insert(mongoOrderInfo);
 
     }
