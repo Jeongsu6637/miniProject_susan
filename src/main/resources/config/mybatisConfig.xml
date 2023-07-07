@@ -8,5 +8,7 @@
                    alias="SearchByKeyword" />
         <typeAlias type="com.susan.domain.request.ShowDetailRequest"
                    alias="ShowDetailRequest" />
+        <typeAlias type="com.susan.domain.entity.Product"
+                   alias="Product" />
     </typeAliases>
 </configuration>
