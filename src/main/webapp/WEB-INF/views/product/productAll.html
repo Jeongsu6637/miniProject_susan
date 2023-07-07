@@ -1,0 +1,53 @@
+
+<html>
+<meta charset="UTF-8">
+<head>
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="../../../resources/css/product.css">
+  <table>
+    <tr>
+      <td>id</td>
+      <td>물품 이름</td>
+      <td>카테고리</td>
+      <td></td>
+      <td></td>
+    </tr>
+      <tr>
+
+        <form method="post" action="/product/delete?seq=${product.product_seq}">
+          <td>${product.product_seq}</td>
+          <td>${product.product_name}</td>
+          <td>${product.category}</td>
+          <td><a href="/product/update?seq=${product.product_seq}">수정하기</a></td>
+          <td><button type="submit">삭제하기</button></td>
+        </form>
+
+      </tr>
+    <tr>
+
+      <form method="post" action="/product/delete?seq=${product.product_seq}">
+        <td>${product.product_seq}</td>
+        <td>${product.product_name}</td>
+        <td>${product.category}</td>
+        <td><a href="/product/update?seq=${product.product_seq}">수정하기</a></td>
+        <td><button type="submit">삭제하기</button></td>
+      </form>
+
+    </tr>
+    <tr>
+
+      <form method="post" action="/product/delete?seq=${product.product_seq}">
+        <td>${product.product_seq}</td>
+        <td>${product.product_name}</td>
+        <td>${product.category}</td>
+        <td><a href="/product/update?seq=${product.product_seq}">수정하기</a></td>
+        <td><button type="submit">삭제하기</button></td>
+      </form>
+
+    </tr>
+  </table>
+</head>
+<body>
+
+</body>
+</html>

@@ -53,13 +53,12 @@ public class ProductController {
      * @return 아직 미정
      */
     @PostMapping("/insert")
-    @ResponseBody
     public String insertProduct(@ModelAttribute ProductInsertRequest p){
 
         System.out.println(p.getName());
         System.out.println(p.getCategory());
         productService.insertProduct(p);
-        return "insert test";
+        return "redirect:/product";
     }
 
 
@@ -84,14 +83,14 @@ public class ProductController {
      * @return 경로는 아직 미정
      */
     @PostMapping("/update")
-    @ResponseBody
+
     public String UpdateProduct(@ModelAttribute ProductUpdateRequest p){
 
         System.out.println(p.getSeq());
         System.out.println(p.getName());
         System.out.println(p.getCategory());
         productService.updateProduct(p);
-        return "Update test";
+        return "redirect:/product";
     }
 
     /**
@@ -100,12 +99,11 @@ public class ProductController {
      * @return
      */
     @PostMapping("/delete")
-    @ResponseBody
     public String deleteProduct(@RequestParam("seq") int seq){
 
         productService.deleteProduct(seq);
 
-        return "Update test";
+        return "redirect:/product";
     }
 
 }

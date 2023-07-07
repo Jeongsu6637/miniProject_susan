@@ -1,0 +1,21 @@
+
+html {
+    background-color: aliceblue;
+}
+
+table{
+    display: flex;
+    flex-direction: column;
+    border-style: double;
+}
+
+tbody{
+    /*위 아래 양옆*/
+    margin: 50px auto;
+    border-style: groove;
+
+}
+
+td{
+    border-style: inset;
+}
