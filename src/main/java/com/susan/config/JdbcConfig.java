@@ -10,7 +10,7 @@ public class JdbcConfig {
     private final String url = "jdbc:mysql://localhost:3306/susan" +
             "?serverTimezone=Asia/Seoul&characterEncoding=UTF-8";
     private final String username = "root";
-    private final String password = "1q2w3e4r";
+    private final String password = "1q2w3e4r!!";
     //    @Bean
     public DataSource dataSource(){
         BasicDataSource dataSource = new BasicDataSource();
