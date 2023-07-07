@@ -17,4 +17,6 @@ public interface StoreMapper {
     int addCart(CartRequest request);
 
     List<MyCart> AllCart(int userSeq);
+
+    int finduserseq(String id);
 }
