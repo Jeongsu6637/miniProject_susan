@@ -37,5 +37,20 @@
         where s.store_name = #{name} ;
     </select>
 
+    <insert id="insertProduct" >
+        <!--        result 값을 구하는 쿼리 -->
+        insert into product (name,category) values(#{product_name},#{category});
+    </insert>
 
+    <update id="updateProduct">
+        update product set name=#{product_name} , category=#{category} where pro_seq=#{product_seq};
+    </update>
+
+    <delete id="deleteProduct">
+        delete from product where pro_seq=#{seq};
+    </delete>
+
+    <select id="findProduct" resultType="Product">
+        select * from product;
+    </select>
 </mapper>
