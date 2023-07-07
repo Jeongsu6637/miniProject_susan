@@ -20,6 +20,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration{
         return MongoClients.create(mongoClientSettings);
     }
     public Collection getMappingBasePackages() {
-        return Collections.singleton("com.test");
+        return Collections.singleton("com.susan.config");
     }
 }
