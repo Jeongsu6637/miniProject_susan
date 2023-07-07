@@ -15,9 +15,6 @@ public class User {
     private String phone;
     private int idType;
 
-    public User() {
-    }
-
     @JsonCreator
     public User(@JsonProperty("user_seq") int user_seq,
                 @JsonProperty("id") String id,

@@ -49,7 +49,8 @@ public class LoginController {
             (login.getIdType() == 1) {
                 mav.setViewName("redirect:/front/main");
             } else if(login.getIdType() == 2) {
-                mav.setViewName("redirect:/front/admin");
+                //mav.setViewName("redirect:/front/admin");
+                mav.setViewName("redirect:/front/main");
             }
         } else {
             // 로그인 실패 처리 로직
