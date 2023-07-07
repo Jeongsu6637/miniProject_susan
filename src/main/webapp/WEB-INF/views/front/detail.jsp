@@ -9,21 +9,28 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Detail</title>
+    <link rel="stylesheet" href="../resources/main.css">
 </head>
 <body>
     <form method="post" action="/front/detail">
         <div class="detail">
-            <td><img src="${image_link}" alt=""></td>
-            <td>${store_name}</td>
-            <td>${store_number}</td>
-            <td>${location}</td>
-            <c:forEach items="${showList}" var = "detail">
-                <tr>
-                    <td>${detail.name}</td>
-                    <td>${detail.price}</td>
-                </tr>
-            </c:forEach>
+            <td>
+                <div class="image_link"><img src="${image_link}"></div>
+            </td>
+            <div class="info">
+                <p>상호명 : ${store_name}</p>
+                <p>전화번호 : ${store_number}</p>
+                <p>주소 : ${location}</p>
+                <c:forEach items="${showList}" var = "detail">
+                    <ul>
+                        <li>${detail.name}</li>
+                        <li>${detail.price}</li>
+                    </ul>
+                </c:forEach>
+            </div>
+
         </div>
     </form>
 </body>
