@@ -22,6 +22,8 @@
         <c:otherwise>
             <div class="user-menu">
                 <a href="/user/mypage?userId=${id}">마이 페이지</a>
+                <a href="/main/cart">장바구니</a>
+
             </div>
         </c:otherwise>
     </c:choose>
