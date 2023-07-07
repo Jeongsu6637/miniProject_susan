@@ -12,7 +12,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration{
     @Override
     protected String getDatabaseName() {
         // TODO Auto-generated method stub
-        return null;
+        return "db";
     }
     public MongoClient mongoClient() {
         ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/");
