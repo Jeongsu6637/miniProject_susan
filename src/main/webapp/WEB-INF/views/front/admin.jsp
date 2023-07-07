@@ -30,10 +30,12 @@
         <section>
             <h2>상점 정보 등록</h2>
             <form method="post" action="/admin/store-info">
-                <label for="storeName">상점 이름:</label>
+                <label for="storeName">상호명</label>
                 <input type="text" id="storeName" name="storeName" required><br>
-                <label for="storeAddress">상점 주소:</label>
+                <label for="storeAddress">주소</label>
                 <input type="text" id="storeAddress" name="storeAddress" required><br>
+                <label for="storeAddress">전화번호</label>
+                <input type="text" id="storePhone" name="storePhone" required><br>
                 <input type="submit" value="등록">
             </form>
         </section>
